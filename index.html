@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Praised Socials</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="profile">
+                <img src="sua-foto.jpeg" alt="Foto de Perfil">
+            </div>
+            <h1>praised.mm2</h1>
+            <p><strong>Criador de Conteúdo</strong></p>
+            <div class="links">
+                <a href="https://www.roblox.com/users/4297997063/profile" class="link">
+                    <img src="roblox-logo.png" alt="Roblox" class="logo">
+                </a>
+                <a href="https://www.tiktok.com/@praised.mm2" class="link">
+                    <img src="tiktok-logo.png" alt="TikTok" class="logo">
+                </a>
+                <a href="https://www.youtube.com/@mm2.praised" class="link youtube-icon">
+                    <i class="fab fa-youtube logo"></i>
+                </a>
+                <a href="https://discord.gg/QzbagvHxQd" class="link discord-icon">
+                    <i class="fab fa-discord logo"></i>
+                </a>
+            </div>            
+            <p class="bio">praised is the best and hes hot 🥵</p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const blocks = document.querySelectorAll('.block');
+            blocks.forEach((block, index) => {
+                block.style.animationDelay = `${index * 0.1}s`;
+                block.classList.add('fall');
+            });
+        };
+    </script>
+</body>
+</html>

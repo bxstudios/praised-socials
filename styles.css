@@ -1,0 +1,131 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #3a0d0d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animações de Aparição */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Estilos do Card */
+.card {
+    background: #fff;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    color: #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideUp 1s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos da Imagem de Perfil */
+.profile img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #000;
+    margin-bottom: 15px;
+    transition: transform 0.4s, border 0.4s;
+}
+
+.profile img:hover {
+    transform: rotate(15deg) scale(1.05);
+    border-color: #ff4747;
+}
+
+/* Título e Texto */
+h1 {
+    margin: 10px 0;
+    font-size: 28px;
+    color: #000;
+}
+
+p {
+    color: #000;
+}
+
+/* Links dos Ícones */
+.links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Alinha todos os ícones ao centro */
+    align-items: center;
+}
+
+.link {
+    margin: 0 5px; /* Diminui o espaçamento entre os ícones */
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Estilos dos Ícones de Rede Social */
+.logo {
+    font-size: 2rem; /* Ajuste para ícones do Font Awesome */
+    color: #000;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.youtube-icon {
+    color: #FF0000; /* Cor padrão do YouTube */
+}
+
+.discord-icon {
+    color: #5865F2; /* Cor padrão do Discord */
+}
+
+/* Bio */
+.bio {
+    margin: 15px 0;
+    font-style: italic;
+    color: #000;
+}
+
+/* Animação de Blocos */
+.block {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.fall {
+    animation: drop 0.6s forwards;
+}
+
+@keyframes drop {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
