@@ -72,6 +72,7 @@ p {
     display: flex;
     justify-content: center; /* Alinha todos os ícones ao centro */
     align-items: center;
+    flex-wrap: wrap; /* Permite que os ícones se quebrem para a linha seguinte em telas pequenas */
 }
 
 .link {
@@ -128,4 +129,55 @@ p {
 @keyframes drop {
     from { transform: translateY(-100%); }
     to { transform: translateY(0); }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .links .link {
+        margin: 0 3px;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para dispositivos muito pequenos (como celulares menores) */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .links {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .bio {
+        font-size: 12px;
+    }
 }
